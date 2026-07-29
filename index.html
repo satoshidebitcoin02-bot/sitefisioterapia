@@ -446,7 +446,11 @@
     font-size:.88rem; color:rgba(247,244,238,.82);
     display:flex; gap:10px; align-items:flex-start; font-weight:300;
   }
-  .whatsapp-card .btn{width:100%; justify-content:center;}
+  .whatsapp-card .btn{width:100%; justify-content:center; white-space:nowrap;}
+  @media (max-width:420px){
+    .whatsapp-card{padding:26px 22px;}
+    .whatsapp-card .btn{font-size:.86rem; padding:16px 14px;}
+  }
 
   /* ---------- Galeria local (carrossel em slide) ---------- */
   .slider-viewport{
@@ -484,8 +488,11 @@
   @media (prefers-reduced-motion: reduce){
     .slider-track{animation:none;}
   }
+  .slider-row-2{margin-top:26px;}
   @media (max-width:640px){
-    .slide-card{width:170px; height:250px;}
+    .slide-card{width:170px; height:210px;}
+    .slider-viewport{padding:4px 0 20px;}
+    .slider-row-2{margin-top:6px;}
   }
 
   /* ---------- Contato ---------- */
@@ -497,7 +504,7 @@
   .contact-card{
     background:var(--navy-2);
     border:1px solid var(--line);
-    border-radius:8px 50px 8px 50px;
+    border-radius:14px;
     padding:44px;
   }
   .contact-item{
@@ -523,7 +530,7 @@
   }
   .social-row a:hover{background:var(--gold); color:var(--navy); transform:translateY(-3px);}
   .map-frame{
-    border-radius:8px 50px 8px 50px;
+    border-radius:14px;
     overflow:hidden;
     border:1px solid var(--line);
     min-height:420px;
@@ -936,7 +943,7 @@
       </div>
     </div>
 
-    <div class="slider-viewport" style="margin-top:26px;">
+    <div class="slider-viewport slider-row-2">
       <div class="slider-track reverse" id="gallerySliderTrack2">
         <div class="slide-card"><img src="https://images.unsplash.com/photo-1598555763574-dca77e10427e?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Sala de acupuntura"></div>
         <div class="slide-card"><img src="https://images.unsplash.com/photo-1754257319767-f844f61837e1?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Sessão de Pilates com bola"></div>
