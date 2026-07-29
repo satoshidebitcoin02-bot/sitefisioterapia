@@ -453,8 +453,8 @@
     overflow:hidden;
     width:100%;
     padding:8px 0 44px;
-    -webkit-mask-image:linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
-    mask-image:linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
+    -webkit-mask-image:linear-gradient(90deg, rgba(0,0,0,.45) 0%, #000 10%, #000 90%, rgba(0,0,0,.45) 100%);
+    mask-image:linear-gradient(90deg, rgba(0,0,0,.45) 0%, #000 10%, #000 90%, rgba(0,0,0,.45) 100%);
   }
   .slider-track{
     display:flex;
@@ -462,6 +462,9 @@
     gap:26px;
     width:max-content;
     animation:slide-loop 38s linear infinite;
+  }
+  .slider-track.reverse{
+    animation-direction:reverse;
   }
   .slider-viewport:hover .slider-track{animation-play-state:paused;}
   .slide-card{
@@ -618,6 +621,16 @@
     .gallery-grid a:nth-child(1){grid-column:span 2; grid-row:span 1;}
     .about-badge{position:static; margin-top:18px; max-width:none;}
     .section{padding:80px 0;}
+  }
+  @media (max-width:640px){
+    .services-grid{grid-template-columns:1fr; gap:20px;}
+    .service-card{
+      padding:30px 26px;
+      border-radius:8px 34px 8px 34px;
+    }
+    .service-card h4{font-size:1.1rem;}
+    .service-card p{font-size:.9rem;}
+    .service-icon{width:46px; height:46px; margin-bottom:18px;}
   }
   @media (max-width:560px){
     .wrap{padding:0 20px;}
@@ -920,6 +933,28 @@
         <div class="slide-card"><img src="https://images.unsplash.com/photo-1630226040750-d934f017f0e4?fm=jpg&q=80&w=600&auto=format&fit=crop" alt=""></div>
         <div class="slide-card"><img src="https://images.unsplash.com/photo-1754258167836-6878c54e316c?fm=jpg&q=80&w=600&auto=format&fit=crop" alt=""></div>
         <div class="slide-card"><img src="https://images.unsplash.com/photo-1598555763574-dca77e10427e?fm=jpg&q=80&w=600&auto=format&fit=crop" alt=""></div>
+      </div>
+    </div>
+
+    <div class="slider-viewport" style="margin-top:26px;">
+      <div class="slider-track reverse" id="gallerySliderTrack2">
+        <div class="slide-card"><img src="https://images.unsplash.com/photo-1598555763574-dca77e10427e?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Sala de acupuntura"></div>
+        <div class="slide-card"><img src="https://images.unsplash.com/photo-1754257319767-f844f61837e1?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Sessão de Pilates com bola"></div>
+        <div class="slide-card"><img src="https://images.unsplash.com/photo-1717500252709-05a73fc4f1da?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Sala de equipamentos"></div>
+        <div class="slide-card"><img src="https://images.unsplash.com/photo-1754941622138-b3c3671f2fa8?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Terapia com dispositivo médico"></div>
+        <div class="slide-card"><img src="https://images.unsplash.com/photo-1630226040750-d934f017f0e4?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Maca de atendimento"></div>
+        <div class="slide-card"><img src="https://images.unsplash.com/photo-1717500252297-b09508db7ceb?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Sala de Pilates com equipamentos"></div>
+        <div class="slide-card"><img src="https://images.unsplash.com/photo-1758654860100-32cd2e83e74a?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Espaço de hidroterapia"></div>
+        <div class="slide-card"><img src="https://images.unsplash.com/photo-1770012905139-713758ded6ec?fm=jpg&q=80&w=600&auto=format&fit=crop" alt="Atendimento de RPG"></div>
+        <!-- duplicado para o loop contínuo -->
+        <div class="slide-card"><img src="https://images.unsplash.com/photo-1598555763574-dca77e10427e?fm=jpg&q=80&w=600&auto=format&fit=crop" alt=""></div>
+        <div class="slide-card"><img src="https://images.unsplash.com/photo-1754257319767-f844f61837e1?fm=jpg&q=80&w=600&auto=format&fit=crop" alt=""></div>
+        <div class="slide-card"><img src="https://images.unsplash.com/photo-1717500252709-05a73fc4f1da?fm=jpg&q=80&w=600&auto=format&fit=crop" alt=""></div>
+        <div class="slide-card"><img src="https://images.unsplash.com/photo-1754941622138-b3c3671f2fa8?fm=jpg&q=80&w=600&auto=format&fit=crop" alt=""></div>
+        <div class="slide-card"><img src="https://images.unsplash.com/photo-1630226040750-d934f017f0e4?fm=jpg&q=80&w=600&auto=format&fit=crop" alt=""></div>
+        <div class="slide-card"><img src="https://images.unsplash.com/photo-1717500252297-b09508db7ceb?fm=jpg&q=80&w=600&auto=format&fit=crop" alt=""></div>
+        <div class="slide-card"><img src="https://images.unsplash.com/photo-1758654860100-32cd2e83e74a?fm=jpg&q=80&w=600&auto=format&fit=crop" alt=""></div>
+        <div class="slide-card"><img src="https://images.unsplash.com/photo-1770012905139-713758ded6ec?fm=jpg&q=80&w=600&auto=format&fit=crop" alt=""></div>
       </div>
     </div>
   </div>
